@@ -41,7 +41,7 @@ class Boot
 end
 
 
-data_set_1 = Boot.new([1.23,2.5,3,4.6,500,236,47,8,9,1.0], 5000)
+data_set_1 = Boot.new([1,2,3,4,5,6,7,8,9,10,11], 5000)
 data_set_1.mean_effluent_conc
 data_set_1.lower_95_effluent_removal
 
