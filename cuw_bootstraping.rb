@@ -13,6 +13,12 @@ class Boot
       (sorted[(len - 1) / 2] + sorted[len / 2]) / 2
   end
 
+  def mean(array)
+      sum = 0
+      array.each { |num| sum += num }
+      sum / array.length
+  end
+
 
   def create_list_of_medians
       temporary_data_set = []
@@ -21,7 +27,7 @@ class Boot
               temporary_data_set << data.sample
 
               if temporary_data_set.length == data.length
-                  list_of_medians << median(temporary_data_set)
+                  list_of_medians << mean(temporary_data_set)
                   temporary_data_set = []
               end
 
@@ -41,7 +47,7 @@ class Boot
 end
 
 
-data_set_1 = Boot.new([1.23,2.5,3,4.6,500,236,47,8,9,1.0], 5000)
+data_set_1 = Boot.new([1,2,3,4,5,6,7,8,9,10,11], 5000)
 data_set_1.mean_effluent_conc
 data_set_1.lower_95_effluent_removal
 
