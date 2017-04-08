@@ -1,3 +1,20 @@
+#
+# Here are the data points that are going to be run, simply replace
+# values with your own data points, just make sure to have a comma between
+# values and that the list is wrapped with brackets like below,
+# and make sure to have at least 10 data points for each.
+#
+#
+influent = [95, 94, 93,95, 94, 93,95, 94, 93, 95]
+effluent = [85, 84, 83,85, 84, 83,85, 84, 83,85, 84, 83,]
+#
+#
+#
+#
+#
+#
+
+
 def median(array)
   sorted = array.sort
   len = sorted.length
@@ -36,10 +53,10 @@ def upper_CI_effluent_conc(effluent)
 end
 
 
-influent = [95, 94, 93,95, 94, 93,95, 94, 93, 95]
-effluent = [85, 84, 83,85, 84, 83,85, 84, 83,85, 84, 83,]
 
 
 
 p "The lower 95% CI of percent removal is #{percent_removal_lower_CI(influent, effluent, 5000).round(2)}%"
 p "The upper 95% CI of effluent concentration is #{upper_CI_effluent_conc(effluent)}"
+
+""
